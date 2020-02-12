@@ -41,4 +41,7 @@ public class Employee {
 	private String empDepartment;
 	@NotNull
 	private Date empJoingDate;
+	@NotNull
+	private String location;
+	
 }
