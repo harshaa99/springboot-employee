@@ -20,7 +20,13 @@ public class EmployeeDAO {
 	@Autowired
 	EmployeeRepo empRepository;
 	
-	//Creating employee records
+	// To save an employee
+	public Employee addEmployee(Employee employee) {
+		
+		return empRepository.save(employee);
+	}
+	
+	//Saving all employee records
 	public List<Employee> saveEmployeeDetails(List<Employee> empDetails){
 		
 		return empRepository.saveAll(empDetails);
@@ -32,7 +38,7 @@ public class EmployeeDAO {
 	}
 	
 	// Get an employee
-	public Employee getEmpDetails(Integer id) {
+	public Employee findEmpDetails(Integer id) {
 		return empRepository.getOne(id);
 	}
 	
